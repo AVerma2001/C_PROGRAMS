@@ -1,0 +1,11 @@
+MOV AX, 0006H
+MOV BX, 0002H 
+MOV CX, 0000H
+
+L1: CMP AX, BX
+JNS LABEL
+HLT
+LABEL: 
+       SUB AX, BX 
+       INC CX
+       jmp L1
